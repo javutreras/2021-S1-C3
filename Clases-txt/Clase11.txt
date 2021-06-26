@@ -1,0 +1,40 @@
+**Definiciones.**
+- Un punto $x_0$ es un punto de *máximo local* (o *relativo*) de un campo escalar $f$ si $f(x_0)$ es el mayor valor que alcanza $f$ en una vecindad de $x_0$.
+
+- Un punto $x_0$ es un punto de *mínimo local* (o *relativo*) de un campo escalar $f$ si $f(x_0)$ es el menor valor que alcanza $f$ en una vecindad de $x_0$.
+
+- Un punto es de *extremo local* (o *relativo*) si satisface alguna de las dos definiciones anteriores.
+
+**Definición.** Un punto $x_0$ es un *punto de silla* (*saddle point*) de un campo escalar $f$ si en algunas direcciones es un máximo local estricto y en otras es un mínimo local estricto.
+
+---
+
+**Criterio (de la matriz jacobiana).** Sea $x_0$ un punto en el interior del dominio de un campo escalar diferenciable $f$. Si $x_0$ es punto de extremo local, entonces $J_f(x_0) = 0$.
+
+---
+
+**Definición.** Sea $f$ un campo escalar, y sea $x_0$ un punto en su dominio. La *matriz hessiana* de $f$ en $x_0$ es $$H_f(x_0)=\begin{bmatrix}\displaystyle\frac{\partial ^2f}{\partial x_i\partial x_j}(x_0)\end{bmatrix}$$
+
+*Observación.* Tal como con la matriz jacobiana $J$ se construye una función lineal $$L(\vec v)=J\vec v$$para aproximar una función diferenciable, con la matriz hessiana $H$ se construye una función cuadrática $$Q(\vec v)=\vec v^TH\vec v$$ que corresponde a los términos de grado 2 del polinomio de Taylor de $f$.
+
+**Propiedad.**
+- Si los valores propios de $H$ son todos reales y positivos, entonces la función $$Q(\vec v)=\vec v^TH\vec v$$ no toma valores negativos. Se dice entonces que es *definida-positiva*, y el vector $\vec v = 0$ es un mínimo de $Q$.
+
+- Si los valores propios de $H$ son todos reales y negativos, entonces la función $$Q(\vec v)=\vec v^TH\vec v$$ no toma valores positivos. Se dice entonces que es *definida-negativa*, y el vector $\vec v = 0$ es un máximo de $Q$.
+
+- Si $H$ tiene valores propios positivos y negativos, entonces la función $$Q(\vec v)=\vec v^TH\vec v$$ toma valores de ambos signos. El vector $\vec v =0$ es un punto de silla de $Q$.
+
+---
+
+**Criterio (de la matriz hessiana).** Sea $f$ un campo escalar de clase $\mathcal{C}^2$, y sea $x_0$ un punto crítico en el interior del dominio de $f$.
+
+- Si los determinantes de los menores principales de $H_f(x_0)$ son todos positivos, entonces $H_f(x_0)$ es definida positiva y $x_0$ es un punto de mínimo local de $f$.
+
+
+- Si los determinantes de los menores principales de $H_f(x_0)$ alternan signos **comenzando con negativo**, entonces $H_f(x_0)$ es definida negativa y $x_0$ es un punto de máximo local de $f$.
+
+- En otro caso, si el determinante de $H_f(x_0)$ es distinto de cero, $x_0$ es un punto de silla de $f$.
+
+---
+
+*Ejemplo.* Determinar los puntos críticos y su naturaleza para la función $$f(x,y)=x^2+x^2y+xy^2-x$$
