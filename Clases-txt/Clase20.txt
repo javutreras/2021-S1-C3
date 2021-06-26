@@ -1,0 +1,48 @@
+## Integrales de línea
+
+Sea $\gamma:[a,b]\to\mathbb{R}^n$ una parametrización de una curva $C$.
+
+- Si $f$ es un campo escalar en $C$, $$\int_C f\,\textrm{d}s = \int_a^b f(\gamma(t))\|\gamma'(t)\|\,\textrm{d}t$$
+
+- Si $f$ es un campo vectorial en $C$, $$\int_C f\cdot\textrm{d}s = \int_a^b f(\gamma(t))\cdot \gamma'(t)\,\textrm{d}t$$
+
+---
+
+**Propiedades.**
+- Si $f$ es un campo escalar, $$\int_{C_1\frown C_2}f\,\textrm{d}s = \int_{C_1}f\,\textrm{d}s + \int_{C_2}f\,\textrm{d}s$$ $$\int_{-C_1}f\,\textrm{d}s = \int_{C_1}f\,\textrm{d}s$$
+
+- Si $f$ es un campo vectorial, $$\int_{C_1\frown C_2}f\cdot\textrm{d}s = \int_{C_1}f\cdot\textrm{d}s + \int_{C_2}f\cdot\textrm{d}s$$ $$\int_{-C_1}f\cdot\textrm{d}s = - \int_{C_1}f\cdot\textrm{d}s$$
+
+---
+
+*Observación.* Dada una curva $C$, la integral escalar $$\int_C1\,\textrm{d}s$$ entrega la longitud de $C$.
+
+---
+
+*Ejemplo.* Calcular $$\int_C xy^2\,\textrm{d}s$$ donde $C$ es la circunferencia de centro $(0,0)$ y radio $1$.
+
+---
+
+*Ejemplo.* Determinar la longitud de la hélice $C$ parametrizada por $$\gamma(t)=\left(\cos(t),\operatorname{sen}(t),\frac{t}{3}\right),\quad -2\pi\le t\le 2\pi$$
+
+---
+
+*Ejemplo.* Sea $C$ la trayectoria siguiente:
+- el segmento del punto $(1,-2)$ al $(1,0)$;
+- seguido por el arco superior de circunferencia con centro $(0,0)$ del punto $(1,0)$ al $(-1,0)$;
+- seguido por el segmento del punto $(-1,0)$ al $(0,-1)$.
+
+Y sea $F$ es el campo vectorial dado por $F(x,y)=(-x,-y)$. Determinar $$\int_CF\cdot\textrm{d}s$$
+
+---
+
+### Campos conservativos
+
+*Ejemplo.* Sea $F(x,y)=(0,k)$, con $k$ constante. Sea $\gamma$ una curva paramétrica cuyo punto final es el mismo punto inicial. Calcular $$\int_\gamma F\cdot\textrm{d}s$$
+
+---
+
+**Definición.** Un campo vectorial se dice *conservativo* si su integral sobre toda trayectoria cerrada (esto es, con punto final igual al inicial) es cero.
+En caso contrario se dice *no conservativo*.
+
+*Ejemplo.* El campo $F(x,y)=(-y,x)$ es no conservativo. Podemos ver esto integrándolo sobre la circunferencia unitaria centrada en el origen, recorrida en sentido antihorario.
