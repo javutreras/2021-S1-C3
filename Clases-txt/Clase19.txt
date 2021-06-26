@@ -1,0 +1,69 @@
+## Curvas paramétricas e  integrales de línea
+
+**Definición.** Una *curva paramétrica* de $\mathbb{R}^n$ es una función $$\gamma :[a,b]\to\mathbb{R}^n$$ que es continua y derivable por trozos.
+
+*Ejemplos.*
+- $\gamma_1:[0,1]\to\mathbb{R}^2$&nbsp;dada por &nbsp;$\gamma(t)=(t^2-1,t^3-1)$.
+
+- $\gamma_2:[1,3]\to\mathbb{R}^2$&nbsp;dada por $$\gamma_2(t)=\begin{cases}(t,2t)&\textrm{ si }t\le 2 \\ (4-t,t^2)&\textrm{ si } t>2\end{cases}$$
+
+---
+
+La gráfica de una función $\gamma:[a,b]\to\mathbb{R}^n$ es un subconjunto de $\mathbb{R}^{n+1}$. Para trabajar con curvas paramétricas, trabajaremos con la imagen (o recorrido) de $\gamma$, que es un subconjunto de $\mathbb{R}^n$ que también, por extensión, se conoce como *curva paramétrica*.
+
+Sin embargo, una curva paramétrica es más que un dibujo - se interpreta como una *trayectoria*, con un punto inicial, un punto final, una orientación (o dirección) y un camino recorrido.
+
+---
+
+*Observación.* Una misma trayectoria puede ser parametrizada por distintas expresiones equivalentes.
+
+*Ejemplo.* $$\gamma(t)=(t+1,2t-1),\quad 0\le t\le 1$$ y $$\eta(t)=\left(\frac{t}{2}+\frac{1}{2},t-2\right),\quad 1\le t\le 3$$ parametrizan el mismo segmento en la misma dirección.
+
+---
+
+*GeoGebra.* Para graficar una curva, se utiliza
+
+    Curve(Expresión, Parámetro, ValorInicial, ValorFinal)
+
+---
+
+### Vector derivada
+
+Si $\gamma$ es una curva y $t$ está en su dominio, el vector $\gamma'(t)$ es tangente a la curva en el instante $t$, y representa cuantitativamente la velocidad del movimiento.
+
+---
+
+### Operaciones entre curvas
+
+- **Concatenar**: si una curva $\gamma_1$ tiene como punto final el punto inicial de otra curva $\gamma_2$, se puede crear la *concatenación* $\gamma_1\frown\gamma _2$ que, en términos de trayectorias, recorre primero $\gamma_1$ y después $\gamma_2$.
+
+- **Invertir**: si se tiene una curva $\gamma$, su *inversa* $(-\gamma)$ es la trayectoria que inicia en el punto final de la curva original y la recorre en sentido inverso hasta terminar en el punto inicial.
+Si se tiene $\gamma:[a,b]\to\mathbb{R}^n$, entonces una parametrización de $(-\gamma)$ es $$(-\gamma):[-b,-a]\to\mathbb{R}^n,\quad (-\gamma)(t)=\gamma(-t)$$
+
+---
+
+### Algunas parametrizaciones simples
+
+- Funciones
+	- Si ya hay una variable independiente, hacer que esa variable sea igual a la nueva variable $t$.
+
+- Segmentos de recta
+
+- Circunferencias
+
+---
+
+### La integral de línea
+
+Sea $\gamma:[a,b]\to\mathbb{R}^n$ una parametrización de una curva $C$.
+
+- Si $f$ es un campo escalar en $C$, $$\int_C f\,\textrm{d}s = \int_a^b f(\gamma(t))\|\gamma'(t)\|\,\textrm{d}t$$
+
+- Si $f$ es un campo vectorial en $C$, $$\int_C f\cdot\textrm{d}s = \int_a^b f(\gamma(t))\cdot \gamma'(t)\,\textrm{d}t$$
+
+---
+
+**Propiedades.**
+- Si $f$ es un campo escalar, $$\int_{C_1\frown C_2}f\,\textrm{d}s = \int_{C_1}f\,\textrm{d}s + \int_{C_2}f\,\textrm{d}s$$ $$\int_{-C_1}f\,\textrm{d}s = \int_{C_1}f\,\textrm{d}s$$
+
+- Si $f$ es un campo vectorial, $$\int_{C_1\frown C_2}f\cdot\textrm{d}s = \int_{C_1}f\cdot\textrm{d}s + \int_{C_2}f\cdot\textrm{d}s$$ $$\int_{-C_1}f\cdot\textrm{d}s = - \int_{C_1}f\cdot\textrm{d}s$$
