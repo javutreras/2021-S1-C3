@@ -1,0 +1,34 @@
+## Integrales triples
+
+*Notación.* La integral de una función $f$ sobre una región $R$ de $\mathbb{R}^3$ se escribe $$\iiint_R f\,\textrm{d}V$$
+
+*Observación.* Si $R$ es una región de $\mathbb{R}^3$, entonces $\iiint_R 1\,\textrm{d}V$ es igual al volumen de $R$.
+
+---
+
+**Propiedad.** Si $R=[a,b]\times [c,d] \times [m,n]$ (un paralelepípedo) y la integral de $f$ no es impropia en $R$, entonces
+$$\iiint_R f\,\textrm{d}V = \int_a^b \int_c^d \int_m^n f\,\textrm{d}z\,\textrm{d}y\,\textrm{d}x$$
+lo que también se puede escribir en cualquiera de los cinco otros órdenes posibles.
+
+*Ejemplo.* Calcular la integral de $f(x,y,z)=x^2+yz$ sobre la región $R=[0,1]\times [0,2] \times [1,3]$
+
+---
+
+En general, si una región en el espacio se puede describir de la forma $$\begin{cases} a\le x\le b \\ g_1(x)\le y\le g_2(x) \\ h_1(x,y)\le z\le h_2(x,y)\end{cases}$$
+entonces esto nos entrega un orden de integración para calcular la integral triple como tres integrales individuales. En la presentación anterior las variables podrían estar en otro orden, pero sus dependencias relativas no.
+
+---
+
+*Notación.* Una integral $\iint_R$ sobre una región del plano se llama *integral doble*; una integral $\iiint_R$ sobre una región del espacio *integral triple*. Integrales de una variable (para calcular las integrales anteriores) se denominan *integrales iteradas*, y el orden de las variables en que se realicen estas integrales iteradas se conoce como el *orden de integración*.
+
+---
+
+*Ejemplo.* Sea $R$ la región encerrada entre las gráficas del paraboloide $z=9-x^2-y^2$ y del plano $z=7+2x-2y$. Escribir $\iiint_R f\,\textrm{d}V$ como integrales iteradas.
+
+*Respuesta.*
+$$\iiint_R f\,\textrm{d}V =\int_{-1}^3\int_{-1-\sqrt{4-(y-1)^2}}^{-1+\sqrt{4-(y-1)^2}} \int_{7+2x-2y}^{9-x^2-y^2} f\,\textrm{d}z\,\textrm{d}x\,\textrm{d}y$$
+
+---
+
+*Ejemplo.* Calcular las integrales iteradas $$\int_0^1 \int _0^{x^2} \int_0^y 1\,\textrm{d}z\,\textrm{d}y\,\textrm{d}x$$
+Describir la región del espacio a la que se acaba de encontrar el volumen.
