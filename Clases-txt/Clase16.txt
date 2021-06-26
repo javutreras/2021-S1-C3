@@ -1,0 +1,15 @@
+## Cambio de variables
+
+*Problema.* Calcular $$\int_1^3 \cos (2x)\,\textrm{d}x$$
+
+---
+
+**Teorema (del cambio de variables).** Sean $R$, $R^*$ dos regiones en un mismo $\mathbb{R}^n$. Sea $T:R^*\to R$ sobreyectiva, de clase $\mathcal{C}^1$, y biyectiva en el interior de $R^*$. Escribimos $T(\vec u) = \vec s$.
+
+Se tiene $$\int_R f(\vec s)\,\textrm{d}\vec s = \int_{R^*} f(T(\vec u))\cdot \left|\det(J_T(\vec u)\right|\,\textrm{d}\vec u$$
+
+---
+
+*Ejemplo.* Sea $R$ el paralelógramo de vértices $(0,0)$, $(2,1)$, $(1,3)$, $(3,4)$. Calcular $$\iint_R x\,\textrm{d}A$$
+
+*Ejemplo.* Calcular el área encerrada dentro de la elipse $$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$$ $(a,b >0)$
