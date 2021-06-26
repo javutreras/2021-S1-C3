@@ -1,0 +1,41 @@
+**Definiciones.** Sean $x=(x_1,x_2,\dots,x_n)\in\mathbb{R}^n$, $y=(y_1,y_2,\dots,y_n)\in\mathbb{R}^n$.
+- La *norma* de $x$ es $$\|x\|=\sqrt{x\cdot x}=\sqrt{x_1^2+x_2^2+\dots+x_n^2}$$
+- La *distancia* entre $x$ e $y$ es $$d(x,y)=\|x-y\|=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+\dots+(x_n-y_n)^2}$$
+
+---
+
+**Definiciones.** Sean $x\in\mathbb{R}^n$, $r> 0$.
+- La *bola abierta* de centro $x$ y radio $r$ es $$B(x,r)=B]x,r[=\{y\in\mathbb{R}^n\,:\,d(x,y)<r\}$$
+- La *bola cerrada* de centro $x$ y radio $r$ es $$B[x,r]=\{y\in\mathbb{R}^n\,:\,d(x,y)\le r\}$$
+- Una *vecindad* de $x$ es una bola abierta de centro $x$ y algún radio.
+
+---
+
+**Definiciones.** Sea $C\subseteq\mathbb{R}^n$.
+- Un punto $x$ es un *punto interior* de $C$ si alguna vecindad de $x$ está completamente contenida en $C$.
+- Un punto $x$ es un *punto de frontera* (o *de borde*) de $C$ si toda vecindad de $x$ intersecta a $C$, sin estar completamente contenida.
+- Un punto $x$ es un *punto de adherencia* de $C$ si toda vecindad de $x$ intersecta a $C$.
+- Un punto $x$ es un *punto de acumulación* de $C$ si es un punto de adherencia de $C-\{x\}$.
+
+---
+
+**Definiciones.** Sea $C\subseteq\mathbb{R}^n$.
+- El *interior* de $C$, denotado por $\mathring{C}$, es el conjunto de todos los puntos interiores de $C$.
+- La *frontera* (o *borde*) de $C$, denotada por $fr(C)$, es el conjunto de todos los puntos de frontera de $C$.
+- La *clausura* de $C$, denotada por $\overline{C}$, es el conjunto de todos los puntos de adherencia de $C$.
+
+---
+
+**Proposición.** Sea $C\subseteq\mathbb{R}^n$.
+$$\mathring{C}\subseteq C\subseteq\overline{C}$$
+
+---
+
+**Definiciones.** Sea $C\subseteq\mathbb{R}^n$.
+- $C$ se dice *abierto* si $C=\mathring{C}$, es decir, si todos sus puntos son interiores.
+- $C$ se dice *cerrado* si $C=\overline{C}$, es decir, si contiene a todos sus puntos de frontera.
+- $C$ se dice *acotado* si está completamente contenido en alguna bola (abierta o cerrada).
+
+---
+
+**Propiedad/definición.** Un conjunto se dice *compacto* si y sólo si es cerrado y acotado.
