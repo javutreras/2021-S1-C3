@@ -1,0 +1,53 @@
+## Integrales dobles
+
+*Notación.* Si $R$ es una región de $\mathbb{R}^2$, la integral de una función $f$ sobre el dominio $R$ se puede escribir $$\iint_R f\,\textrm{d}A$$ para reforzar por partida doble que se trabaja con una integral en dos dimensiones.
+
+---
+
+*Observación.* Si $I$ es un intervalo, entonces $\int_I 1\,\textrm{d}x$ es la longitud de $I$.
+
+*Observación.* Si $R$ es una región de $\mathbb{R}^2$, entonces $\iint_R 1\,\textrm{d}A$ es el área de $R$.
+
+---
+
+**Teorema (informal).** Para que una función sea integrable sobre un dominio compacto en $\mathbb{R}^2$ es necesario y suficiente que el conjunto de puntos de discontinuidad de la función no tenga área.
+
+---
+
+*Problema.* Encontrar una forma de describir la suma de todos los elementos de una matriz de $m\times n$ usando sumatorias:
+$$\begin{array}{cccc}
+a_{11} & a_{12} & a_{13} & a_{14} \\
+a_{21} & a_{22} & a_{23} & a_{24} \\
+a_{31} & a_{32} & a_{33} & a_{34} 
+\end{array}$$
+
+---
+
+*Ejemplo.* Sea $R$ el rectángulo $[-1,1]\times [0,3
+]$. Calcular la integral de la función $f(x,y)=xy^2+x-1$ sobre ese dominio.
+
+---
+
+*Problema.* Sea $R$ la región encerrada entre las gráficas de $y=x^2$ e $y=x^3$. ¿Cómo integrar una función $f$ sobre este dominio?
+
+---
+
+En general, una región $R$ del plano se busca describir de una de las siguientes formas:
+- $$\begin{cases}
+a\le x\le b \\
+g(x) \le y \le h(x) \end{cases}$$
+para obtener $$\iint_R f\,\textrm{d}A = \int_a^b \int_{g(x)}^{h(x)}f\,\textrm{d}y\,\textrm{d}x$$
+
+- $$\begin{cases}
+a\le y\le b \\
+g(y) \le x \le h(y) \end{cases}$$
+para obtener $$\iint_R f\,\textrm{d}A = \int_a^b \int_{g(y)}^{h(y)}f\,\textrm{d}x\,\textrm{d}y$$
+
+---
+
+*Ejemplo.* Calcular la integral $\iint_R (x+y)\,\textrm{d}A$ donde $R$ es la región encerrada entre las gráficas de $y=x^2$, $y=1$ e $y=3$.
+
+---
+
+**Teorema (Fubini).** 
+Se puede escoger cualquier orden de integración siempre y cuando la integral no sea impropia.
