@@ -1,0 +1,63 @@
+## Teorema de la función implícita
+
+*Situación de ejemplo.* Se tienen cuatro variables $x,y,u,v$ relacionadas de la forma siguiente: $$\begin{cases}y^2-x^2+u^3-v^2=4\\ 2xy-y^2+2u^2-3v^4=8\end{cases}$$
+
+Se tiene además una situación inicial: $$\begin{cases}x=2\\ y=1\\ u=2\\ v=1\end{cases}$$
+
+Problema: si se alteran ciertas variables pero las relaciones originales se mantienen, ¿cómo resultan afectadas las demás variables?
+
+En particular:  describir qué pasaría con $u,v$ si se hace, por ejemplo,$$\begin{cases}x=2.01\\ y=0.98\end{cases}$$
+
+*Desarrollo usando el teorema.*
+
+Haciendo $$f(x,y,u,v) = (y^2-x^2+u^3-v^2, 2xy-y^2+2u^2-3v^4)$$
+
+tenemos la situación inicial $$f(2,1,2,1)=(4,8)$$ y buscamos valores de $u,v$ para que se cumpla $$f(2.01,0.98,u,v)=(4,8)$$
+
+Es decir, buscamos despejar las variables $u,v$ en términos de las variables $x,y$.
+
+Notamos que la función $f$ es de clase $\mathcal{C}^1$, y las derivadas parciales con respecto a las variables que queremos despejar forman la matriz $$\begin{bmatrix}3u^2&-2v\\4u&-12v^3\end{bmatrix}\Bigg|_{(x,y,u,v)=(2,1,2,1)}=\begin{bmatrix}12&-2\\8&-12\end{bmatrix}$$
+que es invertible.
+
+Por consiguiente se aplica el teorema de la función implícita:
+- existe una función $\varphi$ que despeja $(u,v)=\varphi(x,y)$;
+
+- el dominio de $\varphi$ es una vecindad de $(x,y)=(2,1)$, y además $\varphi(2,1)=(2,1)$;
+- $\varphi$ es de clase $\mathcal{C}^1$, y en consecuencia diferenciable;
+- $$J_\varphi(2,1)=-\begin{bmatrix}12&-2\\8&-12\end{bmatrix}^{-1}\begin{bmatrix}-2x&2y\\2y&2x-2y\end{bmatrix}\Bigg|_{(x,y,u,v)=(2,1,2,1)}$$
+$$J_\varphi(2,1)=-\frac{-1}{128}\begin{bmatrix}-12&2\\-8&12\end{bmatrix}\begin{bmatrix}-4&2\\2&2\end{bmatrix}$$
+$$J_\varphi(2,1)=\frac{1}{32}\begin{bmatrix}13&-5\\14&2\end{bmatrix}$$
+
+Como es diferenciable, la diferencial de $(u,v)=\varphi(x,y)$ es $$\begin{bmatrix}u\\v\end{bmatrix}=\frac{1}{32}\begin{bmatrix}13&-5\\14&2\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}$$ y la buena aproximación afín es $$\begin{bmatrix}u-2\\v-1\end{bmatrix}=\frac{1}{32}\begin{bmatrix}13&-5\\14&2\end{bmatrix}\begin{bmatrix}x-2\\y-1\end{bmatrix}$$
+$$\begin{bmatrix}u\\v\end{bmatrix}=\frac{1}{32}\begin{bmatrix}13&-5\\14&2\end{bmatrix}\begin{bmatrix}x-2\\y-1\end{bmatrix}+\begin{bmatrix} 2\\1\end{bmatrix}$$
+
+---
+
+## Teorema de la función inversa
+
+*Situación de ejemplo.* Se tienen cuatro variables $x,y,z,w$ relacionadas de la forma siguiente: $$\begin{cases} z=y^3-3x \\w=x^2-3y\end{cases}$$
+
+Se tiene además una situación inicial: $$\begin{cases}x=1 \\y=0\\ z=-3\\ w=1\end{cases}$$
+
+Problema: si se alteran las variables ya despejadas manteniendo las relaciones, ¿cómo resultan afectadas las demás variables?
+
+En particular: describir qué pasaría con $x,y$ si se hace, por ejemplo, $$\begin{cases}z=-3.01\\ w=1.02\end{cases}$$
+
+*Desarrollo usando el teorema.*
+Haciendo $$f(x,y)=(y^3-3x,x^2-3y)$$ tenemos $$(z,w)=f(x,y)$$ El dato inicial es $$(-3,1)=f(1,0)$$ el objetivo es despejar $$(x,y)=g(z,w)$$ y aproximar $$(x,y)=g(-3.01,1.02)$$
+
+Tenemos que $f$ es de clase $\mathcal{C}^1$, y su matriz jacobiana en el punto es $$\begin{bmatrix}-3&3y^2 \\ 2x&-3\end{bmatrix}\Bigg|_{(x,y)=(1,0)}=\begin{bmatrix}-3&0 \\ 2&-3\end{bmatrix}$$ que es invertible.
+
+Del teorema de la función inversa se concluye:
+
+- Se puede despejar $(x,y)=g(z,w)$ en una vecindad del punto $(-3,1)$, y $g(-3,1)=(1,0)$;
+
+- $g$ es de clase $\mathcal{C}^1$, en particular, es diferenciable;
+- $$J_g(-3,1)=\begin{bmatrix}-3&0 \\ 2&-3\end{bmatrix}^{-1}$$ $$J_g(-3,1)=\frac{1}{9}\begin{bmatrix}-3&0 \\ -2&-3\end{bmatrix}$$
+
+La diferencial de $(x,y)=g(z,w)$ en el punto es $$\begin{bmatrix}x\\y \end{bmatrix}=\frac{1}{9}\begin{bmatrix}-3&0 \\ -2&-3\end{bmatrix}\begin{bmatrix}z\\w \end{bmatrix}$$
+
+La buena aproximación afín es $$\begin{bmatrix}x-1\\y \end{bmatrix}=\frac{1}{9}\begin{bmatrix}-3&0 \\ -2&-3\end{bmatrix}\begin{bmatrix}z+3\\w-1\end{bmatrix}$$ $$\begin{bmatrix}x\\y \end{bmatrix}=\frac{1}{9}\begin{bmatrix}-3&0 \\ -2&-3\end{bmatrix}\begin{bmatrix}z+3\\w-1\end{bmatrix}+\begin{bmatrix}1\\0 \end{bmatrix}$$
+
+Los valores buscados son $$(x,y)=g(-3.01,1.02)$$ $$\begin{bmatrix}x\\y \end{bmatrix}\approx\frac{1}{9}\begin{bmatrix}-3&0 \\ -2&-3\end{bmatrix}\begin{bmatrix}-3.01+3\\1.02-1\end{bmatrix}+\begin{bmatrix}1\\0 \end{bmatrix}$$ $$\begin{bmatrix}x\\y \end{bmatrix}\approx\frac{1}{9}\begin{bmatrix}-3&0 \\ -2&-3\end{bmatrix}\begin{bmatrix}-0.01\\0.02\end{bmatrix}+\begin{bmatrix}1\\0 \end{bmatrix}$$ $$\begin{bmatrix}x\\y \end{bmatrix}\approx \begin{bmatrix}1+\displaystyle\frac{0.03}{9}\\[4mm] 0 +\displaystyle\frac{0.08}{9}\end{bmatrix}$$
+
