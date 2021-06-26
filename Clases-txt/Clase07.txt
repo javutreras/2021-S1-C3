@@ -1,0 +1,28 @@
+**Definición.** Sean $f$ una función y $x_0$ un punto es su dominio. La *"candidata a aproximación"* es la función afín asociada a la matriz $J_f(x_0)$ y que pasa por el punto $(x_0,f(x_0))$.
+
+Llamemos $A$ a esta aproximación. La condición de pasar por el punto $(x_0, f(x_0))$ equivale a $A(x_0)=f(x_0)$.
+
+**Propiedad.** Para verificar si una "candidata a aproximación" verdaderamente aproxima a la función original se verifica el límite $$\lim_{x\to x_0}\frac{\|f(x)-A(x)\|}{\|x-x_0\|}=0$$
+
+- Si el límite señalado no existe o no es cero, entonces la función es *no diferenciable* en el punto estudiado, y la "candidata" no es una buena aproximación.
+
+- Si el límite señalado es cero, la función es *diferenciable* en el punto, la función lineal asociada a $J_f(x_0)$ es su *diferencial* y la función afín $A$ es su *buena aproximación afín*.
+
+**Definición.** Si $f$ es diferenciable en $x_0$, la gráfica de su buena aproximación afín se llama el *espacio (afín) tangente* a $f$ en $x_0$.
+
+**Teorema.** Se tienen las siguientes propiedades.
+- Una función de clase $\mathcal{C}^1$ es diferenciable.
+	- Es decir, si sabemos que una función es de clase $\mathcal{C}^1$ sabemos que la "candidata" automáticamente verifica el límite.
+- Una función diferenciable tiene derivadas direccionales en todas las direcciones.
+
+- Una función diferenciable es continua.
+
+---
+
+**Definición.** Sea $f:A\subseteq\R^n\to\R$ un campo escalar, y sea $x_0$ un punto en el dominio de $f$. El *vector gradiente* de $f$ en $x_0$ es el vector de $\R^n$ cuyas componentes son las derivadas parciales de $f$ en $x_0$, en orden. Se denota $\nabla f(x_0)$.
+
+*Ejemplo.* Si $f(x,y,z)=xy+x^2z-y$, su vector gradiente es $$\nabla f(x,y,z)=(f_x,f_y,f_z)=(y+2xz,x-1,x^2)$$
+
+*Observación.* De la definición se observa que el vector gradiente es la traspuesta de la matriz jacobiana en el mismo punto.
+
+
