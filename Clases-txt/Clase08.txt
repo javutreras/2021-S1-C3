@@ -1,0 +1,17 @@
+**Propiedades.** Sea $f$ un campo escalar diferenciable en un punto $x_0$​.
+
+-   El vector $\left(\nabla f(x_0),-1\right)$ es normal al espacio tangente a $f$ en $x_0$​.
+    
+-   Si $\hat u$ es un vector unitario, la derivada direccional cumple $\frac{\partial f}{\partial \hat u}(x_0)=\nabla f(x_0)\cdot \hat u$.
+    
+-   El mayor valor que toma una derivada direccional en el punto es $\|\nabla f(x_0)\|$, y se alcanza en la dirección del vector $\nabla f(x_0)$.
+    
+-   El menor valor que toma una derivada direccional en el punto es $-\|\nabla f(x_0)\|$, y se alcanza en la dirección del vector $-\nabla f(x_0)$.
+
+---
+
+*Notación.* La diferencial de $f$ en un punto $x_0$ (la función lineal) se denota $Df_{x_0}$.
+
+---
+
+**Teorema (Regla de la cadena).** Sean $f, g$ dos funciones, y sea $x_0$ un punto del dominio de $g\circ f$. Si $f$ es diferenciable en $x_0$ y $g$ es diferenciable en $f(x_0)$, la composición es diferenciable, y se tiene $$D(g\circ f)_{x_0} = Dg_{f(x_0)}\circ Df_{x_0}$$
