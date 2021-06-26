@@ -1,0 +1,9 @@
+## Teorema de la función implícita
+
+*Situación de ejemplo.* Se tienen cuatro variables $x,y,u,v$ relacionadas de la forma siguiente: $$\begin{cases}y^2-x^2+u^3-v^2=4\\ 2xy-y^2+2u^2-3v^4=8\end{cases}$$
+
+Se tiene además una situación inicial: $$\begin{cases}x=2\\ y=1\\ u=2\\ v=1\end{cases}$$
+
+Problema: si se alteran ciertas variables pero las relaciones originales se mantienen, ¿cómo resultan afectadas las demás variables?
+
+En particular:  describir qué pasaría con $u,v$ si se hace, por ejemplo,$$\begin{cases}x=2.01\\ y=0.98\end{cases}$$
