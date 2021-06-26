@@ -1,0 +1,45 @@
+## Conjuntos simple-conexos y el teorema de Green
+
+**"Definición".** Un conjunto $D$ es *simple-conexo* si "no tiene agujeros", es decir, si toda curva cerrada en $D$ puede ser contraída de forma continua a un punto sin salirse de $D$ en el proceso.
+
+**Teorema.** Si $F$ es un campo vectorial de $\mathbb{R}^2$ de clase $\mathcal{C}^1$ con dominio simple-conexo, entonces $F$ es un campo conservativo si y sólo si $$\frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}$$
+
+*Ejemplo.* Sea $F(x,y)=(2y^2+3,4xy-1)$, y sea $\gamma$ una trayectoria del punto $(-1,0)$ al punto $(1,2)$. Determinar $$\int_\gamma F\cdot\textrm{d}s$$
+
+*Ejemplo.* Mismo problema, pero con una trayectoria $\eta$ del punto $(1,2)$ al $(3,0)$
+
+---
+
+*Notaciones.* Como el vector infinitesimal en una curva $\textrm{d}s$ es de la forma $(\textrm{d}x, \textrm{d}y)$ o $(\textrm{d}x, \textrm{d}y, \textrm{d}z)$, una integral vectorial de línea se puede escribir de la forma siguiente:
+
+$$\int_C (F_1,F_2)\cdot\textrm{d} s=\int_C F_1\,\textrm{d}x+F_2\,\textrm{d}y$$
+
+$$\int_C (x^2,yz,x-1)\cdot \textrm{d}s = \int_C x^2\,\textrm{d}x+yz\,\textrm{d}y+(x-1)\,\textrm{d}z$$
+
+---
+
+*Definición.* Una curva es *simple cerrada* si
+- el punto inicial y el final son el mismo, y
+- salvo por el hecho de que vuelve al punto inicial, la curva no se intersecta a sí misma.
+
+**Teorema (de la curva de Jordan).** Toda curva simple cerrada en $\mathbb{R}^2$ es el borde de una región simple-conexa.
+
+*Definición.* Si $R$ es una región simple-conexa y su borde es una curva simple cerrada, entonces &nbsp;$\partial R$ es la curva simple cerrada del borde de $R$ recorrida en el sentido positivo.
+
+¿Cuál es el sentido positivo?
+
+---
+
+**Teorema (Green).** Si $R$ es una región simple-conexa de $\mathbb{R}^2$ y $F$ es un campo vectorial de clase $\mathcal{C^1}$ en $R$ y en $\partial R$, entonces $$\iint_R \left(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right)\,\textrm{d}A = \int_{\partial R}F\cdot\textrm{d}s$$
+
+---
+
+*Ejemplo.* Si $\gamma(t)=(\cos t, \operatorname{sen}t)$ para $0\le t\le 2\pi$, determinar $$\int_\gamma (y^3,-x^3)\cdot \textrm{d}s$$
+
+*Ejemplo.* Si $C$ es la trayectoria de forma triangular descrita por $(0,0)\to (1,0)\to (1,2)\to (0,0)$, determinar $$\int_C (xy, x^2y^3)\cdot \textrm{d}s$$
+
+---
+
+#### Forma general del teorema
+
+**Teorema.** Si $R$ es una región de $\mathbb{R}^2$ cuyo borde está formado por curvas simple cerradas $\gamma_1, \gamma_2,\ldots ,\gamma_n$ y $F$ es un campo vectorial de clase $\mathcal{C}^1$ en $R$ y su borde, entonces $$\iint_R \left(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right)\,\textrm{d}A = \sum_{i=1}^n \int_{\gamma_i}F\cdot\textrm{d}s$$
