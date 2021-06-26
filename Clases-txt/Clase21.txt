@@ -1,0 +1,54 @@
+## Campos conservativos y regiones simple-conexas
+
+**Definición.** Un campo vectorial se dice *conservativo* si su integral sobre toda trayectoria cerrada (esto es, con punto final igual al inicial) es cero.
+
+---
+
+Sea $F$ un campo conservativo.
+Sean $\gamma_1, \gamma_2$ dos curvas paramétricas con punto inicial y punto final en común. Entonces la curva $\gamma_1\frown (-\gamma_2)$  es cerrada, y se tiene $$\int_{\gamma_1\frown(-\gamma_2)}F\cdot\textrm{d}s = 0$$
+
+$$\int_{\gamma_1}F\cdot\textrm{d}s+\int_{-\gamma_2}F\cdot\textrm{d}s =0$$
+
+$$\int_{\gamma_1}F\cdot\textrm{d}s-\int_{\gamma_2}F\cdot\textrm{d}s =0$$
+
+$$\int_{\gamma_1}F\cdot\textrm{d}s=\int_{\gamma_2}F\cdot\textrm{d}s$$
+
+Se concluye la siguiente propiedad.
+
+**Teorema (independencia de camino).** Si $F$ es un campo conservativo y $\gamma$ una curva paramétrica, entonces el valor de $$\int_\gamma F\cdot\textrm{d}s$$ depende únicamente del punto inicial y del punto final de $\gamma$, no de la trayectoria que se haya seguido para llegar del primero al segundo.
+
+---
+
+**Teorema.** Un campo vectorial es conservativo si y sólo si es el gradiente de algún campo escalar.
+
+*Definición.* Si $F=\nabla f$, se dice que $f$ es una *función potencial* del campo $F$.
+
+**Teorema (fundamental del cálculo para campos conservativos).** Sean $F$ un campo conservativo, $f$ una función potencial de $F$ y $\gamma$ una curva que va de un punto inicial $P$ a un punto final $Q$. Se tiene $$\int_\gamma F\cdot\textrm{d}s = f(Q) - f(P)$$
+
+---
+
+*Ejemplo.* Para el campo conservativo $F(x,y)=(0,-mg)$ (con $m,g$ constantes), determinar la integral vectorial siguiendo una trayectoria $\gamma$ que va del punto $(1,-1)$ al punto $(2,1)$.
+
+*Ejemplo.* Sea $C$ la trayectoria siguiente:
+- el segmento del punto $(1,-2)$ al $(1,0)$;
+- seguido por el arco superior de circunferencia con centro $(0,0)$ del punto $(1,0)$ al $(-1,0)$;
+- seguido por el segmento del punto $(-1,0)$ al $(0,-1)$.
+
+Y sea $F$ es el campo vectorial dado por $F(x,y)=(-x,-y)$. Determinar $$\int_CF\cdot\textrm{d}s$$
+
+---
+
+*Definición.* Si $F$ es un campo conservativo y $f$ es una función potencial de $F$, los conjuntos de la forma $f=c$, con $c$ constante, se llaman *conjuntos equipotenciales* de $F$.
+
+---
+
+*Problema.* ¿Cómo reconocer un campo conservativo?
+
+*Contraejemplo.* $$F(x,y)=\left(\frac{-y}{x^2+y^2},\frac{x}{x^2+y^2}\right)$$
+Integrar esta función sobre la circunferencia unitaria recorrida en sentido antihorario.
+
+---
+
+**"Definición".** Un conjunto $D$ es *simple-conexo* si "no tiene agujeros", es decir si toda curva cerrada en $D$ puede ser contraída de forma continua a un punto sin salirse de $D$ en el proceso.
+
+**Teorema.** Si $F$ es un campo vectorial de $\mathbb{R}^2$ de clase $\mathcal{C}^1$ en un dominio simple-conexo, entonces $F$ es un campo conservativo si y sólo si $$\frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}$$
