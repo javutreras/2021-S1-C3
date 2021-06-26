@@ -1,0 +1,24 @@
+*Ejemplo.* Sea $R$ la región encerrada entre
+- el plano $z=0$,
+- el plano $z=x+y+5$,
+- el cilindro $x^2+y^2=4$,
+- el cilindro $x^2+y^2=1$.
+
+Encontrar $$\iiint_R x\,\textrm{d}V$$
+
+---
+
+*Ejemplo.* Sea $R$ la región descrita de la forma siguiente:
+- sobre el plano $z=0$,
+- dentro de la esfera $x^2+y^2+z^2=20$,
+- bajo el cono $z=2\sqrt{x^2+y^2}$.
+
+Encontrar el volumen de $R$.
+
+---
+
+*Ejemplo.* Determinar la distancia promedio de un punto de una esfera de radio $r$ a su centro.
+
+---
+
+*Ejemplo.* Determinar el volumen de la región encerrada entre los paraboloides de ecuaciones $z=x^2+y^2$, $z=36-3x^2-3y^2$.
