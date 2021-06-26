@@ -1,0 +1,18 @@
+La derivada de una función de una variable $f$ en un punto $x_0$ está dada por la aproximación de la pendiente de la recta entre dos puntos en la gráfica de $f$, a medida que esos dos puntos convergen en el $(x_0, f(x_0))$: $$f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}$$
+Por consiguiente, esta derivada $f'(x_0)$ mide la inclinación de la gráfica de $f$ en el punto $(x_0,f(x_0))$.
+Si se construye una recta que pase por este mismo punto con pendiente igual a la derivada, en dicho punto la gráfica de $f$ y la recta tendrán la misma inclinación. Es por esto que a la recta se le conoce como la *recta tangente* a la gráfica de $f$ en el punto.
+En la siguiente gráfica, $f(x)=x^4-3x^3+3x-2$, $x_0=1$ y el punto $P$ es $(1,-1)$. La derivada es $f'(1)=-2$, y la recta es de ecuación $y-(-1)=-2(x-1)$.
+
+![Ejemplo](https://udec.instructure.com/courses/18186/files/1109014/preview?instfs=true)
+
+---
+
+**Definición.** Sea $f$ una función de dos variables $x,y$, y sea $(x_0,y_0)$ un punto de su dominio. La *derivada parcial* de $f$ con respecto a $x$ en el punto $(x_0,y_0)$ es $$\frac{\partial f}{\partial x}(x_0,y_0)=\lim_{h\to 0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h}$$
+
+Análogamente, la *derivada parcial* de $f$ con respecto a $y$ en el punto $(x_0,y_0)$ es $$\frac{\partial f}{\partial y}(x_0,y_0)=\lim_{h\to 0}\frac{f(x_0,y_0+h)-f(x_0,y_0)}{h}$$
+
+Más generalmente, si $f$ es una función de $n$ variables $x_1,x_2,\dots,x_n$, su *derivada parcial* con respecto a la $i$-ésima variable es $$\frac{\partial f}{\partial x_i}(x_1,x_2,\dots ,x_n)=\lim_{h\to 0}\frac{f(x_1,x_2,\dots ,x_i+h,\dots,x_n)-f(x_1,x_2,\dots ,x_n)}{h}$$
+
+---
+
+**Definición.** Sea $f:A\subseteq \R^n\to \R^m$, sean $x_1,\dots, x_n$ las variables del dominio de $f$, y sea $\mathbf{x}$ un punto en el dominio de $f$. La *matriz jacobiana* de $f$ en $\mathbf{x}$ es la matriz de $m\times n$ definida por $$J_f(\mathbf{x})=\left[\frac{\partial f_i}{\partial x_j}(\mathbf{x})\right]$$
