@@ -1,0 +1,54 @@
+## Los teoremas del cálculo vectorial
+
+### El operador $\nabla$
+
+*Idea.* Una derivada parcial puede pensarse como una función que actúa sobre una función. Considerar el "vector de operadores" $$\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}\right)$$
+
+- Si $f$ es un campo escalar, la operación $\nabla f$ se interpreta como un producto entre un vector y un escalar, y resulta $$\nabla f = \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\right)$$
+
+- Si $f$ es un campo vectorial, la operación $\nabla\cdot f$ se interpreta como un producto punto de vectores, y resulta $$\nabla\cdot f = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z}$$
+
+- Si $f$ es un campo vectorial, la operación $\nabla\times f$ se interpreta como un producto cruz de vectores, y resulta $$\nabla\times f = \left(\frac{\partial f_3}{\partial y}-\frac{\partial f_2}{\partial z}, \frac{\partial f_1}{\partial z}-\frac{\partial f_3}{\partial x},\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y} \right)$$
+
+---
+
+### Divergencia y rotacional
+
+Sea $F$ un campo vectorial de $\mathbb{R}^3$.
+
+- La *divergencia* de $F$ en un punto $(x,y,z)$ es el escalar $$\operatorname{div}F(x,y,z)=(\nabla\cdot F)(x,y,z)$$
+
+- El *rotacional* de $F$ en un punto $(x,y,z)$ es el vector $$\textbf{rot}F(x,y,z)=(\nabla\times F)(x,y,z)$$
+
+---
+
+### Algunas propiedades
+
+Del teorema de Schwarz se pueden deducir las siguientes identidades:
+
+- Si $F$ es un campo vectorial de clase $\mathcal{C}^2$, la divergencia de su rotacional es cero: $$\nabla\cdot (\nabla\times F) = 0$$
+
+- Si $f$ es un campo escalar de clase $\mathcal{C}^2$, el rotacional de su gradiente es cero: $$\nabla\times(\nabla f) = 0$$
+
+Además, si el dominio es simple-conexo, se tienen las inversas de las propiedades anteriores:
+
+- Si $\nabla\cdot G=0$ entonces $G$ es el rotacional de algún campo vectorial.
+
+- Si $\nabla\times G=0$ entonces $G$ es el gradiente de algún campo escalar.
+
+**Propiedad.** Un campo vectorial de $\mathbb{R}^3$ con dominio simple-conexo es conservativo si y sólo si $\textbf{rot}F=0$.
+
+**Teorema (descomposición Helmholtz).** Sea $F$ un campo vectorial de clase $\mathcal{C}^2$ en un dominio acotado de $\mathbb{R}^3$. Existen campos vectoriales $F_1$ y $F_2$ tales que
+- $F = F_1+F_2$
+
+- $\operatorname{div}F_1 = 0$
+
+- $\textbf{rot}F_2=0$
+
+---
+
+**Teorema (Gauss).** Sean $R$ una región del espacio y $\partial R$ su borde con orientación positiva. Si $F$ es un campo vectorial de clase $\mathcal{C}^1$ en $R$, entonces $$\iint_{\partial R} F\cdot\textrm{d}S = \iiint_R\operatorname{div}F\,\textrm{d}V$$
+
+---
+
+**Teorema (Stokes).** Sean $S$ una superficie parametrizada orientable del espacio y $\partial S$ su borde con orientación positiva. Si $F$ es un campo vectorial de clase $\mathcal{C}^1$ en $S$, entonces $$\int_{\partial S}F\cdot\textrm{d}s = \iint_S\textbf{rot}F\cdot\textrm{d}S$$
