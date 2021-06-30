@@ -1,6 +1,4 @@
-# 2021-S1-C3
-
-## Material del ramo Cálculo III - 2021 - S1
+# Material del ramo Cálculo III - 2021 - S1
 
 ### Organización
 
