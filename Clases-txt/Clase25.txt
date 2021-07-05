@@ -8,11 +8,13 @@
 
 ### Ejemplos
 
+1.  Sea $C$ la trayectoria triangular que va entre los vértices $(0,0,4) \to (0,2,0) \to (2,0,0) \to (0,0,4)$ en ese orden. Utilizar el teorema de Stokes para calcular $$\int_C (zx^3-2z, xz, yx)\cdot\textrm{d}s$$
+
 1. Sea $S$ el borde de la región encerrada sobre el paraboloide $z=x^2+y^2$ y bajo el plano $z=4$, orientada hacia afuera de la región. Sea $F(x,y,z)=(y,x,z)$. Determinar la integral $\iint_S F\cdot n\,\textrm{d}S$
 	- directamente, 
 
 	- utilizando el teorema de Gauss.
 
-2.  Sea $C$ la trayectoria triangular que va entre los vértices $(0,0,4) \to (0,2,0) \to (2,0,0) \to (0,0,4)$ en ese orden. Utilizar el teorema de Stokes para calcular $$\int_C (zx^3-2z, xz, yx)\cdot\textrm{d}s$$
+1. Sea $C$ la curva intersección entre las gráficas de $z=y^2-x^2$ y $x^2+y^2=1$, orientada de forma que, vista desde arriba, se recorre en sentido antihorario. Utilizar el teorema de Stokes para calcular $$\int_C \left(x^2y, \frac{x^3}{3}, xy\right)\cdot\textrm{d}s$$
 
-3. Sea $F$ un campo vectorial con divergencia cero. Sean $S_1$, $S_2$ dos superficies parametrizables cerradas orientadas hacia el exterior, y tales que una de ellas está contenida en la región interior a la otra. Suponer que $F$ es de clase $\mathcal{C}^1$ en la región encerrada entre ambas superficies. Mostrar que $$\iint_{S_1}F\cdot n\,\textrm{d}S = \iint_{S_2}F\cdot n\,\textrm{d}S$$
+1. Sea $F$ un campo vectorial con divergencia cero. Sean $S_1$, $S_2$ dos superficies parametrizables cerradas orientadas hacia el exterior, y tales que una de ellas está contenida en la región interior a la otra. Suponer que $F$ es de clase $\mathcal{C}^1$ en la región encerrada entre ambas superficies. Mostrar que $$\iint_{S_1}F\cdot n\,\textrm{d}S = \iint_{S_2}F\cdot n\,\textrm{d}S$$
